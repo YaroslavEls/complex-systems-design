@@ -1,2 +1,2 @@
 # complex-systems-design
-📚 Проектування складних систем
+laboratory works, 8-th semester
