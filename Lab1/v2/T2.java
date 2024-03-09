@@ -21,8 +21,8 @@ public class T2 extends Thread {
     }
 
     public void run() {
-        double[][] tmp1 = MathUtils.partialMatrixMultiplication(Data.MB, Data.MO, Data.H, Data.N);
-        double[][] tmp2 = MathUtils.partialMatrixSubstraction(Data.MB, Data.MO, Data.H, Data.N);
+        double[][] tmp1 = MathUtils.partialMatrixMultiply(Data.MB, Data.MO, Data.H, Data.N);
+        double[][] tmp2 = MathUtils.partialMatrixSubstract(Data.MB, Data.MO, Data.H, Data.N);
         double[][] tmp3 = MathUtils.multiplyMatrixByMatrix(Data.MS, tmp2);
         double[][] MGh = MathUtils.addMatrices(tmp1, tmp3);
 
@@ -37,8 +37,8 @@ public class T2 extends Thread {
             lock1.unlock();
         }
 
-        double[] tmp4 = MathUtils.partialVectorMultiplication(Data.O, Data. MO, Data.H, Data.N);
-        double[] tmp5 = MathUtils.partialVectorMultiplication(Data.B, Data. MB, Data.H, Data.N);
+        double[] tmp4 = MathUtils.partialVectorMultiply(Data.O, Data. MO, Data.H, Data.N);
+        double[] tmp5 = MathUtils.partialVectorMultiply(Data.B, Data. MB, Data.H, Data.N);
         double[] Sh = MathUtils.addVectors(tmp4, tmp5);
 
         lock2.lock();
